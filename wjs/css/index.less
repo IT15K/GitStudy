@@ -1,0 +1,784 @@
+// 变量表
+@import "./setting.less";
+// 清除浏览器默认样式
+@import "./reset.less";
+// 同一默认样式
+@import "./normalize.less";
+
+// 页面样式
+.wjs-container {
+  position: relative;
+  width: 100%;
+}
+
+// 小屏幕顶部导航 
+
+// 小屏幕侧边栏
+
+// 主要内容
+.wjs-main{
+  width: 100%;
+  position: relative;
+}
+
+// 顶部导航 topnav
+.wjs-topnav{
+  width: 100%;
+  height: @topHeight;
+  border-bottom:1px solid @topBorderColor;
+  .container{
+    width: @smallWidth;
+    margin: 0 auto;
+    overflow: hidden;
+    li{
+      float: left;
+      text-align: center;
+      line-height: 40px;
+      color: @topFontColor;
+      border-left: 1px solid @topBorderColor;
+    }
+    a{
+      color: @topFontColor;
+    }
+    .qrcode{
+      width: @qrcodeWidth;
+      border: none;
+    }
+    .service{
+      width: @serviceWidth;
+    }
+    .extra{
+      width: @extraWidth;
+    }
+    .join{
+      width: @joinWidth;
+      a{
+        font-size: 14px;
+      }
+      a:first-child{
+        color:@white;
+        padding:5px 6px;
+        background: @signupColor;
+        border-radius: @topRadius;
+        margin-right: 10px;
+      }
+    }
+  }
+  
+}
+
+
+// 导航 nav
+.wjs-nav{
+  width: 100%;
+  height: @navHeight;
+  overflow: hidden;
+  border-bottom: 1px solid @navBorderColor;
+  .container{
+    width: @smallWidth;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  } 
+  li{
+      position: relative;
+      height: 100%;
+      font-size: 16px;
+      float: left;
+      line-height: @navHeight;
+      &:first-child{
+        width: 145px;
+        padding: 0;
+        margin-right: 30px;
+        img{
+          width: 100%;
+          vertical-align: middle; 
+        }
+      }
+      &:last-child{
+        float: right;
+        margin-right: 50px;
+      }
+      a{
+        display: block;
+        padding: 0 15px;
+        color: #878787;
+      }
+      b{
+        width: 0%;
+        height: 2px;
+        background-color: @signupColor;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        opacity: 0;
+        transform: translate(-50%);
+      }
+      &:hover b{
+        opacity: 1;
+        width: 100%;
+        transition: all 0.5s; 
+      }
+    }
+}
+
+// 轮播图
+.wjs-carousel {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+  .swipe-wrap {
+    overflow: hidden;
+    position: relative;
+    li {
+      float:left;
+      width:100%;
+      position: relative;
+    }
+    a {
+      display: block;
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 270px;
+      vertical-align: middle;
+    }
+  }
+}
+
+// 信息
+.wjs-info{
+  width: 100%;
+  padding: @exPadding;
+  border-bottom: 1px solid @navBorderColor;
+  .container{
+    max-width: @bigWidth;
+    margin: 0 auto;
+    overflow: hidden; 
+  }
+  dl{
+    float: left;
+    width: 33.33333%;
+    padding:@dlPadding;
+    dt{
+    margin-bottom: @dtBottom;
+    font-size: 18px;
+    line-height: 1;
+    }
+    dd{
+      font-size: 15px;
+      color: @exColor;
+      margin-bottom: 10px;
+      span{
+        font-size: 12px;
+        font-family: @exFontFamily;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+// 通知
+.wjs-notify{
+  width: 100%;
+  padding: @notifyPadding;
+  border-bottom: 1px solid @navBorderColor;
+  .container{
+    max-width: @bigWidth;
+    margin: 0 auto;
+    overflow: hidden; 
+    position: relative;
+  }
+  li{
+    font-size: 14px;
+    line-height: @notifyImgHeight;
+    span{
+      color: @notifyColor;
+    }
+    .blue{
+      color: @notifyqaColor;
+      margin: 0 20px;
+    }
+    .orange{
+      color:  @notifyColor;
+      border-bottom: 1px dashed @notifyColor;
+    }
+    &:last-child{
+        position: absolute;
+        right: 100px;
+        top: 50%;
+        margin: -19px;
+      a{
+        display: block;
+        width: 123px;
+      }
+      img{
+        width: 100%;
+        vertical-align: middle;
+      }
+    }
+  }
+
+}
+
+// 借贷
+.wjs-loan{
+  width: 100%;
+  padding: 20px 0;
+  background-image: url('../images/box-style-bg.png');
+  .container{
+    max-width: @bigWidth;
+    margin: 0 auto;
+  }
+  // 标题
+  .loan-wrap{
+    width: 100%;
+    overflow: auto;
+    border-bottom: 1px solid @topBorderColor;
+    .tabs{
+      min-width: @tabsMinWidth;
+      height: @tabsHeight;
+      line-height: @tabsLineHeight;
+      padding-left: 15px;
+      li{
+        float: left;
+        padding: 7px 18px;
+        position: relative;
+        a{
+          display: block;
+          line-height: @tabsLineHeight;
+          font-size:16px; 
+          font-family: Arial, Helvetica, sans-serif;
+        }
+      }
+      .active{
+        b{
+          width: 100%;
+          height: 2px;
+          background-color: @signupColor;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+  //标题介绍
+  .loan-wrap-info{
+    width: 100%;
+    height: @introHeihgt;
+    background-color: @white;
+    margin-top: 15px;
+    position: relative;
+    box-shadow: @introBoxShadow;
+    border-radius: @introRadius;
+    &:after{
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 56px;
+      top: -8px;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid @white;
+    }
+    p{
+      font-size: 14px;
+      padding-left: 20px;
+      line-height: @introHeihgt;
+    }
+  }
+  //借贷券
+  .items {
+    width: 100%;
+    padding-top: 20px;
+    text-align: justify;
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+      overflow: hidden;
+    }
+    .blank {
+      display: inline-block;
+      width: 31.5%;
+    }
+    .item_first{
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      color: #fff;
+      width: 31.5%;
+      height: 148px;
+      margin-bottom: 20px;
+      border-radius: 3px;
+      padding: @itemPadding;
+      box-shadow: @itemBoshadow;
+      background-color: #e61e25;
+      img{
+        width: 28px;
+        height: 26px;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .item-left{
+        width: 100%;
+        height: 100%;
+        padding: 0 15px;
+        .l{
+          float: left;
+        }
+        .r{
+          float: right;
+        }
+        dt{
+          font-size: 15px;
+          font-weight: bold;
+          margin-bottom: 15px;
+        }
+        dd{
+          width: 100%;
+          overflow: hidden;
+          margin: 8px 0;
+        }
+        dd:nth-child(even){
+          font-size: 12px;
+          opacity: 0.5;
+        }
+        dd:nth-child(odd){
+          font-size: 18px;
+        }
+      }
+      .item-right{
+        width: @itemRateWidth;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        border-left: 1px dashed #d5d5d5;
+        &:before{
+          content: '';
+          position: absolute;
+          left: -8px;
+          top: -8px;
+          width: 16px;
+          height: 16px;
+          background-color: #f0f0f0;
+          border-radius: 50%;
+        }
+        &:after{
+          content: '';
+          position: absolute;
+          left: -8px;
+          bottom: -8px;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background-color: #f0f0f0;
+          box-shadow: @itemRateBoxShadow;
+        }
+        li{
+          text-align: center;
+        }
+        .bfb{
+          margin: 50px 0 10px 0;
+          & span:first-child{
+            font-size: 30px;
+            font-weight: bold;
+          }
+          & span:last-child{
+            font-size: 15px;
+            font-weight: bold;
+          }
+        }
+        .nll_2{
+          font-size: 12px;
+        }
+      }
+    }
+    .item{
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      width: 31.5%;
+      height: 148px;
+      margin-bottom: 20px;
+      padding: @itemPadding;
+      border-radius: 3px;
+      box-shadow: @itemBoshadow;
+      background-color: @white;
+      .item-left{
+        width: 100%;
+        height: 100%;
+        padding: 0 15px;
+        .l{
+          float: left;
+        }
+        .r{
+          float: right;
+        }
+        dt{
+          font-size: 15px;
+          font-weight: bold;
+          margin-bottom: 15px;
+        }
+        dd{
+          width: 100%;
+          overflow: hidden;
+          margin: 8px 0;
+        }
+        dd:nth-child(even){
+          font-size: 12px;
+          color:#999;
+        }
+        dd:nth-child(odd){
+          font-size: 18px;
+          color: #333;
+        }
+      }
+      .item-right{
+        width: @itemRateWidth;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        border-left: 1px dashed #ccc;
+        &:before{
+          content: '';
+          position: absolute;
+          left: -8px;
+          top: -8px;
+          width: 16px;
+          height: 16px;
+          background-color: #f0f0f0;
+          border-radius: 50%;
+        }
+        &:after{
+          content: '';
+          position: absolute;
+          left: -8px;
+          bottom: -8px;
+          width: 16px;
+          height: 16px;
+          background-color: #f0f0f0;
+          border-radius: 50%;
+          box-shadow: @itemRateBoxShadow;
+        }
+        li{
+          text-align: center;
+        }
+        .eb{
+          margin: 20px 0;
+          span {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            font-size: 12px;
+            line-height: 16px;
+            text-align: center;
+            border: 1px solid;
+            &.e {
+              border-color: #399;
+              color: #399;
+            }
+    
+            &.b {
+              border-color: #f56854;
+              color: #f56854;
+            }
+         }
+        }
+        .bfb{
+          margin-bottom: 10px;
+          & span:first-child{
+            font-size: 30px;
+            color: #e61e25;
+            font-weight: bold;
+          }
+          & span:last-child{
+            font-size: 15px;
+            color: #e61e25;
+            font-weight: bold;
+          }
+        }
+        .nll_1{
+          font-size: 14px;
+          color: #721786;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+        .nll_2{
+          font-size: 12px;
+          color:#999;
+        }
+      }
+    }
+    .item_last{
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      width: 31.5%;
+      height: 148px;
+      margin-bottom: 20px;
+      border-radius: 3px;
+      padding: @itemPadding;
+      box-shadow: @itemBoshadow;
+      background-color: #E6E6E6;
+      &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: url(../images/loan-status-5.png) center no-repeat;
+      background-size: auto 72%;
+      }
+      .item-left{
+        width: 100%;
+        height: 100%;
+        padding: 0 15px;
+        .l{
+          float: left;
+        }
+        .r{
+          float: right;
+        }
+        dt{
+          font-size: 15px;
+          font-weight: bold;
+          margin-bottom: 15px;
+        }
+        dd{
+          width: 100%;
+          overflow: hidden;
+          margin: 8px 0;
+        }
+        dd:nth-child(even){
+          font-size: 12px;
+          color:#999;
+        }
+        dd:nth-child(odd){
+          font-size: 18px;
+          color: #333;
+        }
+      }
+      .item-right{
+        width: @itemRateWidth;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        border-left: 1px dashed #ccc;
+        &:before{
+          content: '';
+          position: absolute;
+          left: -8px;
+          top: -8px;
+          width: 16px;
+          height: 16px;
+          background-color: #f0f0f0;
+          border-radius: 50%;
+        }
+        &:after{
+          content: '';
+          position: absolute;
+          left: -8px;
+          bottom: -8px;
+          width: 16px;
+          height: 16px;
+          background-color: #f0f0f0;
+          border-radius: 50%;
+          box-shadow: @itemRateBoxShadow;
+        }
+        li{
+          text-align: center;
+        }
+        .eb{
+          margin: 20px 0;
+          span {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            font-size: 12px;
+            line-height: 16px;
+            text-align: center;
+            border: 1px solid;
+            &.e {
+              border-color: #399;
+              color: #399;
+            }
+    
+            &.b {
+              border-color: #f56854;
+              color: #f56854;
+            }
+         }
+        }
+        .bfb{
+          margin-bottom: 10px;
+          & span:first-child{
+            font-size: 30px;
+            color: #e61e25;
+            font-weight: bold;
+          }
+          & span:last-child{
+            font-size: 15px;
+            color: #e61e25;
+            font-weight: bold;
+          }
+        }
+        .nll_1{
+          font-size: 14px;
+          color: #721786;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+        .nll_2{
+          font-size: 12px;
+          color:#999;
+        }
+      }
+    }
+  }
+
+  
+}
+
+// 新闻
+.wjs-news{
+  width: @bigWidth;
+  margin: 0 auto;
+  padding: @newsPadding;
+  overflow: hidden;
+  .title{
+    width: @titleWidth;
+    float: left;
+    padding: @titlePadding;
+    margin-left: @titleLeft;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    line-height: 1;
+    h6{
+      font-size: 16px;
+      font-weight: normal;
+      color: #333;  
+    }
+    i{
+      position: absolute;
+      right: -7px;
+      bottom: -4px;
+      width: 8px;
+      height: 8px;
+      overflow: hidden;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+
+    }
+  }
+  .round{
+    float: left;
+    position: relative;
+    margin-left: 50px;
+    li:nth-child(-n+4){
+      display: block;
+      width: 55px;
+      height: 55px;
+      margin-bottom: 35px;
+      background-color: #d0d0d0;
+      border-radius: 55px;
+      position: relative;
+      z-index: 10;
+      &:hover{
+        background-color: #e61e25;
+      }
+    }
+    li:nth-child(4){
+      margin-bottom: 0;
+    }
+    li:first-child{
+      background-color: #e61e25;
+    }
+    li:last-child{
+      position: absolute;
+      top: 0;
+      left: 27px;
+      height: 100%;
+      border-left: 1px dashed #CCC;
+    }
+    
+  }
+  .info{
+    float: left;
+    margin-left: 50px;
+    li{
+      padding: 15px 0;
+    }
+    a{
+      color: #444;
+      font-size: 14px;
+    }
+  }
+}
+
+// 底部
+.wjs-footer{
+  width: 100%;
+  border-top: 1px solid #ccc;
+  margin-top: 30px;
+  .footer-nav{
+    width: 100%;
+    height:48px; 
+    font-size: 14px;
+    text-align: center;
+    a:nth-child(-n+10){
+      margin: 0 5px;
+      color: #666;
+      font-size: 14px;
+      display: inline-block;
+      line-height: 48px;
+    }
+  }
+}
+  .footer{
+    width: 100%;
+    height: 135px;
+    background-color: #333;
+    text-align: center;
+    p{
+      padding-top: 20px;
+      color: #fff;
+    }
+    a{
+      width: auto;
+      height: 42px;
+      display: inline-block;
+      margin: 25px 20px 20px 0;
+    }
+    img{
+      width: auto;
+      height: 42px;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+// 媒体查询
+@media screen and (max-width: 980px) {
+  
+}
+
+@media screen and (max-width: 768px) {
+
+}
